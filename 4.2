@@ -1,0 +1,41 @@
+import socket
+
+
+
+
+host = socket.gethostbyname(socket.gethostname())
+port = 9997
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+s.bind((host, port))
+s.setblocking(True)
+
+
+
+
+def client1_send(data, s):
+    server = ()
+
+    s.sendto(data.encode(), server)
+
+
+client1_send("I joined the game!", s)
+
+
+
+wn = turtle.Screen()
+
+wn.bgcolor('black')
+wn.title("PingPong")
+wn.setup(height=600, width=800)
+
+#Score!!! (NOT MADE)
+score_a = 0
+score_b = 0
+
+#pen
+pen = turtle.Turtle()
+pen.speed(0)
+pen.color("white")
+pen.penup()
+pen.hideturtle()
+pen.goto(0, 260)
